@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Title</title>
+    <meta charset="utf-8">
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+        @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+        @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+        body { font-family: 'Droid Serif'; }
+        h1, h2, h3 {
+            font-family: 'Yanone Kaffeesatz';
+            font-weight: normal;
+        }
+        .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    </style>
+    <link rel="stylesheet" type="text/css" href="css/remark_theme.css"/>
+</head>
+<body>
+<textarea id="source">
+
+class: center, middle, inverse
+
+# HTML y CSS
+    Mauricio Collazos
+
+---
+class: inverse
+
+# ¿Qué es HTML?
+
+--
+
+## Hyper
+## Text
+## Markup
+## Language
+
+---
+class: inverse
+
+# Nociones importantes
+
+## - Es un archivo de texto
+## - Si abres una etiqueta, no olvides cerrarla
+
+---
+class: inverse
+
+# Estructura
+```
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>
+
+    </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+
+</header>
+<nav>
+
+</nav>
+<section>
+
+</section>
+<aside>
+
+</aside>
+<footer>
+
+</footer>
+</body>
+</html>
+```
+
+---
+class: inverse, center
+
+# Que visualmente se traduce en esto
+![El gran libro de HTML5 CSS4 y Javascript, Juan Diego Gauchat, Marcombo](img/01_esquema_html.png)
+
+    El gran libro de HTML5 CSS4 y Javascript, Juan Diego Gauchat, Marcombo
+
+---
+class: inverse
+
+# Partes de un documento HTML
+
+## header
+## nav
+## section
+## aside
+## footer
+
+---
+class: inverse
+
+# Header
+
+Incluye la información introductoria del sitio, como títulos y logos
+
+> ## No debe confundirse con el head
+
+
+    Ejemplo:
+```
+   <header>
+        <h1>Este es el título principal del sitio web</h1>
+    </header>
+```
+
+---
+class: inverse
+
+# Nav
+
+Corresponde a la barra de navegación y nos proporciona enlaces útiles para ir en el sitio
+
+    Ejemplo:
+```
+   <nav>
+        <ul>
+            <li>
+                <a href="principal.html">
+                    principal
+                </a>
+            </li>
+            <li>
+                <a href="fotos.html">
+                    fotos
+                </a>
+            </li>
+
+            <li>
+                <a href="contacto.html">
+                    contacto
+                </a>
+            </li>
+        </ul>
+    </nav>
+```
+---
+class: inverse
+
+# Section
+
+Corresponde al fragmento con el contenido principal del documento
+
+    Ejemplo:
+```
+   <section>
+
+            <article>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum
+            </article>
+            <article>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum
+            </article>
+
+
+    </section>
+```
+---
+class: inverse
+
+# Aside
+
+Contiene información adicional, junto con enlaces útiles relacionados con el sitio
+
+    Ejemplo:
+```
+   <aside>
+        <blockquote>Mensaje número uno</blockquote>
+        <blockquote>Mensaje número dos</blockquote>
+    </aside>
+```
+
+---
+class: inverse
+
+# Footer
+
+Contiene información de cierre del sitio o conclusión. Suelen colocarse en esta sección la información de contacto
+
+
+```
+    <footer>
+        Derechos Reservados &copy; 2010-2011
+    </footer>
+```
+
+---
+
+# ¿Qué es CSS?
+
+--
+
+## Cascade
+## Style
+## Sheet
+
+---
+
+# ¿Qué es CSS?
+
+Es un lenguaje complementario e independiente a HTML, usado para reducir la complejidad de los documentos HTML y darles un mejor aspecto
+
+---
+
+# Maneras de relacionar CSS con HTML
+
+- Estilos en línea
+    ```
+    <p style=”font-size: 20px”>Mi texto</p>
+    ```
+- Estilos embebidos
+    ```
+    <head>
+        <style>
+            p { font-size: 20px }
+        </style>
+    </head>
+    ```
+- Archivo externo
+    ```
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    ```
+
+    *style.css*
+    ```
+    p {font-size: 20px}
+    ```
+
+---
+
+# Referenciando el HTML
+
+- Por palabra clave
+    ```
+        <p>Mi texto</p>
+    ```
+    *style.css*
+    ```
+        p { font-size: 20px }
+    ```
+- Por clase
+    ```
+        <p class=”texto1”>Mi texto</p>
+    ```
+    *style.css*
+    ```
+        .texto1 {font-size: 20px}
+    ```
+- Por identificador
+    ```
+        <p id=”texto1”>Mi texto</p>
+    ```
+    *style.css*
+    ```
+        #texto1 {font-size: 20px}
+    ```
+
+---
+
+# Propiedades CSS
+
+- display: Define la manera como se van a ver los elementos
+    Valores posibles:
+    block, inline-block, inline, none
+- width y height: Definele ancho y el alto de un elemento
+    Valores posibles:
+    px, em, rem, % auto
+
+- margin y padding: Definen la ubicación relativa del contenido. Se divide en -top -right -bottom -left
+- border:  Define los bordes. Se divide en -width -style -color
+- floats: Define una ubicación relativa de un contenido
+    Valores posibles:
+    left, right, top, button, none
+- color: Define el color de las letras
+- background: Define el fondo del elemento. Se divide en -color -image -repeat -position
+- font: Define el tipo de letra. Se divide en -style -variant -weight -size -height -family
+
+https://zellwk.com/blog/9-important-css-properties-you-must-know/
+
+---
+class:  center
+
+# Modelo de Caja
+
+![](img/01_caja.png)
+
+    http://3con14.eu/i2015/_data/temas/web/caja.png
+</textarea>
+<script src="https://gnab.github.io/remark/downloads/remark-latest.min.js">
+</script>
+<script>
+    var slideshow = remark.create();
+</script>
+</body>
+</html>
