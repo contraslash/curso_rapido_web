@@ -1,3 +1,5 @@
 .DS_Store
 .idea/
 recursos/el-gran-libro-de-html5-css3-y-javascript.pdf
+recursos/*
+videos/*

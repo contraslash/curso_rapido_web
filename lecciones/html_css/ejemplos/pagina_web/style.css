@@ -1,0 +1,27 @@
+p{
+  font-size: 20px;
+}
+
+header h1{
+  color: red;
+  text-align: center;
+}
+
+nav li{
+  display: inline;
+}
+
+section{
+  float: left;
+  width: 75%;
+}
+
+aside{
+  float: right;
+  width: 25%;
+}
+
+footer{
+  margin-top: 30px;
+  clear: both;
+}
