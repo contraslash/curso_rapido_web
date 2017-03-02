@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Removing the Elements from DOM in jQuery</title>
+<style type="text/css">
+.container{
+    padding: 10px;
+    background: #f0e68C;
+    border: 1px solid #bead18;
+}
+</style>
+<script src="../../dist/jquery-1.11.3.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    // Removes paragraphs with class "hint" from DOM on button click
+    $("button").click(function(){
+       $("p.hint").remove();
+    });
+});
+</script>
+</head>
+<body>
+    <div class="container">
+        <h1>Hello World!</h1>
+        <p class="hint"><strong>Note:</strong> If you click the following button it will remove this paragraph.</p>
+        <button type="button">Remove Hint Paragraph</button>
+    </div>
+</body>
+</html>

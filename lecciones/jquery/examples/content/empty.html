@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Removing the Contents of the Elements in jQuery</title>
+<style type="text/css">
+.container{
+    padding: 10px;
+    background: #f0e68C;
+    border: 1px solid #bead18;
+}
+</style>
+<script src="../../dist/jquery-1.11.3.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    // Empty container div on button click
+    $("button").click(function(){
+       $(".container").empty();
+    });
+});
+</script>
+</head>
+<body>
+    <div class="container">
+        <h1>Hello World!</h1>
+        <p class="hint"><strong>Note:</strong> If you click the following button it will remove all the contents of the container div including the button.</p>
+        <button type="button">Empty Container</button>
+    </div>
+</body>
+</html>

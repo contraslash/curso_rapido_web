@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Inserting HTML Contents At the End of the Elements in jQuery</title>
+<script src="../../dist/jquery-1.11.3.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    // Append all paragraphs on document ready
+    $("p").append(' <a href="#">read more...</a>');
+
+    // Append a div container on button click
+    $("button").click(function(){
+       $("#container").append("This is demo text.");
+    });
+});
+</script>
+</head>
+<body>
+    <button type="button">Insert Text</button>
+    <div id="container">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante.</p>
+        <p>Quis quam ut magna consequat faucibus. Pellentesque eget nisi a mi suscipit tincidunt. Ut tempus dictum risus. Pellentesque viverra sagittis quam at mattis. Suspendisse potenti.</p>
+    </div>
+</body>
+</html>
