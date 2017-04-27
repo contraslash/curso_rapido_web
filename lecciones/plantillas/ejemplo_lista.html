@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>
+      Ejemplo mustache
+    </title>
+  </head>
+  <body>
+    <button type="button" name="button" id="boton">
+      Generar
+    </button>
+    <div class="" id="contenido">
+
+    </div>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery.mustache.js"></script>
+    <script type="text/javascript" src="js/mustache.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function()
+      {
+        $("#boton").click(function()
+        {
+          var contexto = {
+            "lista": [1,2,3]
+          };
+          console.log(contexto);
+          $.Mustache.load('contenido.html')
+          .done(function()
+          {
+              $('#contenido').mustache('lista', contexto);
+          })
+          .fail(function()
+          {
+            alert("Error cargando la plantilla")
+          });
+
+
+        });
+      });
+    </script>
+  </body>
+</html>

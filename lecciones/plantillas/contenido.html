@@ -1,0 +1,29 @@
+<script id="contenido" type="text/html">
+  Estos son los valores
+  {{nombre}}
+  {{apellido}}
+</script>
+<script id="lista" type="text/html">
+  Estos son los valores de la lista
+  {{#lista}}
+    {{.}}
+  {{/lista}}
+</script>
+<script id="couchdb_lista" type="text/html">
+  Valores almacenados en base de datos
+  <ul>
+
+  {{#rows}}
+    <li>
+      <a href="elemento_couch_db.html?key={{key}}">
+        {{key}}
+      </a>
+    </li>
+  {{/rows}}
+</ul>
+</script>
+<script id="email-password" type="text/html">
+  Correo: {{email}}
+  <br/>
+  Contraseña: {{password}}
+</script>
