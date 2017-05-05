@@ -18,20 +18,14 @@ $(document).ready(function()
   {
     console.log("asd");
     $.ajax({
-        url: "http://couchdb.contraslash.com/prueba1/_all_docs",
+        url: "http://couchdb.contraslash.com/prueba1/_all_docs?include_docs=true",
         type: "GET",
         success: function (sreg, status, jqXHR) {
             var obj_json = JSON.parse(sreg);
             console.log(obj_json);
             for(var i=0; i<obj_json.rows.length ; i++)
             {
-              $.ajax({
-                  url: "http://couchdb.contraslash.com/prueba1/"+obj_json.rows[i].id,
-                  type: "GET",
-                  success: function (sreg, status, jqXHR) {
-                    show_data(JSON.parse(sreg));
-                  }
-                });
+              show_data(obj_json.rows[i].doc);
             }
 
         },
