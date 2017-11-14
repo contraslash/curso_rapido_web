@@ -113,11 +113,42 @@ Obtener el clima con openweathermap
   "cod": 200
 }
 ```
+
+---
+# Ahora desde Javascript
+```javascript
+var request = new Request("http://api.openweathermap.org/data/2.5/weather?id=3687925&APPID=<TOKEN_ID>");
+var res = null;
+var cont = null;
+fetch(request).then(
+  function(response)
+  {
+    if(response.status == 200) {
+      res = response;
+      response.json().then(
+        function(value)
+        {
+          cont = value;
+        })
+
+    }
+    else
+    {
+        console.log(response.status)
+    }
+  }
+).catch(
+  function(error) {
+    console.error(error);
+});
+```
 </textarea>
 <script src="../../js/remark.min.js">
 </script>
 <script>
     var slideshow = remark.create();
+
+
 </script>
 </body>
 </html>
