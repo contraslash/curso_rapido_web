@@ -1,72 +1,77 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+    <meta charset="utf-8">
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+        @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+        @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
 
-
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="icon" type="image/png" href="../../img/favicon_negro.png"/>
-    <link rel="stylesheet" href="../../vendor/materialize/dist/css/materialize.min.css">
-    <link rel="stylesheet" href="../../static/css/custom.css">
-
-    <title>
-        &lt;learn&gt;
-    </title>
+        body { font-family: 'Droid Serif'; }
+        h1, h2, h3 {
+            font-family: 'Yanone Kaffeesatz';
+            font-weight: normal;
+        }
+        .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    </style>
+    <link rel="stylesheet" type="text/css" href="css/remark_theme.css"/>
 </head>
-<body class="white">
+<body>
+<textarea id="source">
 
+class: center, middle, inverse
 
-<header class="site-header">
-    <div class="navbar-fixed">
-        <nav class="white black-text">
-            <div class="nav-wrapper">
-                <a href="http://learn.contraslash.com" class="text-black brand-logo center">
-                    <img src="../../img/logo_learn_negro.png" class="responsive-img hide-on-med-and-down" style="max-height: 64px;">
+# APIs
+    Mauricio Collazos
 
-                </a>
-                <a class="brand-logo center black-text">
+---
 
+# ¿Qué son?
 
+Corresponden a las siglas en ingles:
 
-                </a>
-                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons black-text">menu</i></a>
-                <ul class="right hide-on-med-and-down">
+Application
+Programming
+Interface
 
+Son una especificación de interacción entre programas
 
-                </ul>
-                <ul class="side-nav" id="mobile-demo">
+---
 
+# 2 Tipos de APIs WEB comunes
 
+### SOAP (Basadas en XML)
+Usadas en programación tradicional, con amplio uso en lenguajes como Java y C#
+### REST (Basadas en JSON)
+Mas usadas en programación web
+---
 
-                </ul>
-            </div>
-        </nav>
-    </div>
-</header>
+> Para consumir un servicio web tan solo es requerido hacer un llamado al sitio por medio del método HTTP Correspondiente
 
-<div class="container">
+  - GET
+  - POST
+  - PUT
+  - DELETE
 
+Existen otros métodos HTTP pero la especificación de REST usa estos
 
-    <section class="container custom_center">
-      <h1 align="center">
+---
 
-      </h1>
-    </section>
-</div>
+> El resultado de un llamado a un API REST será un JSON
 
+---
+Obtener el clima con openweathermap
 
-<footer>
-    <div class="container">
-
-    </div>
-</footer>
-
-<script type="text/javascript" src="../../vendor/jquery/jquery-2.1.1.min.js"></script>
-
-<script type="text/javascript" src="../../vendor/materialize/dist/js/materialize.min.js" ></script>
-<script src="../../static/js/init.js"></script>
-
+- [Crear una cuenta](https://home.openweathermap.org/users/sign_up)
+- [Obtener el token de Acceso](https://home.openweathermap.org/api_keys)
+- [Determina la ciudad para realizar la petición](http://bulk.openweathermap.org/sample/city.list.json.gz) (Cali: 3687925)
+- http://api.openweathermap.org/data/2.5/weather?id=3687925&APPID=<APIKEY>
+</textarea>
+<script src="https://gnab.github.io/remark/downloads/remark-latest.min.js">
+</script>
+<script>
+    var slideshow = remark.create();
+</script>
 </body>
 </html>
