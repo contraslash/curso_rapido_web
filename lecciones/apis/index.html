@@ -15,7 +15,7 @@
         }
         .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
     </style>
-    <link rel="stylesheet" type="text/css" href="css/remark_theme.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/remark_theme.css"/>
 </head>
 <body>
 <textarea id="source">
@@ -67,8 +67,54 @@ Obtener el clima con openweathermap
 - [Obtener el token de Acceso](https://home.openweathermap.org/api_keys)
 - [Determina la ciudad para realizar la petición](http://bulk.openweathermap.org/sample/city.list.json.gz) (Cali: 3687925)
 - http://api.openweathermap.org/data/2.5/weather?id=3687925&APPID=<APIKEY>
+
+---
+
+```json
+{
+  "coord": {
+    "lon": -76.52,
+    "lat": 3.44
+  },
+  "weather": [
+    {
+      "id": 803,
+      "main": "Clouds",
+      "description": "broken clouds",
+      "icon": "04n"
+    }
+  ],
+  "base": "stations",
+  "main": {
+    "temp": 294.15,
+    "pressure": 1016,
+    "humidity": 94,
+    "temp_min": 294.15,
+    "temp_max": 294.15
+  },
+  "visibility": 10000,
+  "wind": {
+    "speed": 1
+  },
+  "clouds": {
+    "all": 75
+  },
+  "dt": 1510628400,
+  "sys": {
+    "type": 1,
+    "id": 4251,
+    "message": 0.0191,
+    "country": "CO",
+    "sunrise": 1510656695,
+    "sunset": 1510699771
+  },
+  "id": 3687925,
+  "name": "Cali",
+  "cod": 200
+}
+```
 </textarea>
-<script src="https://gnab.github.io/remark/downloads/remark-latest.min.js">
+<script src="../../js/remark.min.js">
 </script>
 <script>
     var slideshow = remark.create();
